@@ -1,0 +1,37 @@
+<div style="text-align: center">
+    <h1>{{ title }}</h1>
+</div>
+<div>
+    <table class="center-hor layout-table" width="500px">
+        <thead>
+            <tr class="header-table-gray">
+                <th>
+                    ID
+                </th>
+                <th>
+                    Nome da Mercadoria
+                </th>
+                <th>
+                    Quantidade
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center" *ngFor = "let mercadoria of mercadorias; 
+                let i = index; let par = even; odd as impar"
+                [ngClass] = "{ par : par , impar : impar}"
+            >
+                <td>
+                    {{ mercadoria.ID }}
+                </td>
+                <td>
+                    {{ mercadoria.descricao }}
+                </td>
+                <td>
+                    {{ mercadoria.quantidade }}
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
