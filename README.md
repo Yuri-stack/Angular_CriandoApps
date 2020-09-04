@@ -1,27 +1,58 @@
-# AngularListaCompras
+<h1 align="center">
+    Shopping List
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+<div>
+    <p align="center">
+        Application created for learning purposes using Angular.
+    </p>
+</div>
 
-## Development server
+<div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  <p align="center">
+    <a href="https://www.linkedin.com/in/yuri-silva99/" target="_blank">
+        <img src="https://img.shields.io/badge/Author-Yuri%20Silva-red">
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/badge/Framework-Angular-red">
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/badge/Language-Javascript-red">
+    </a>
+  </p>
 
-## Code scaffolding
+</div>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+- 🍔 Creating a table to show the goods
+- 🧾 Form to update the table of goods
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Explored and implemented concepts
 
-## Running unit tests
+- [X] What is Angular framework?
+- [X] How to create an application
+- [X] LIFT Principle
+- [X] Directives, Arrays
+- [X] Inserting Form
+- [X] Adding data via the Form
+- [ ] Loading...
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting started
 
-## Running end-to-end tests
+<b>First, you need to install Node.js on your machine.</b>
+<br>
+```
+git clone https://github.com/Yuri-stack/Angular_CriandoApps
+```
+<b>Install dependencies</b>
+```
+npm install or npm i
+```
+Run `ng serve --open` for open de project in browser. The app will automatically reload if you change any of the source files.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## License
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Released in 2020. This project is under the MIT license.
+Made with care and love by Yuri Oliveira 🚀.

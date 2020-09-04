@@ -12,14 +12,21 @@
                     Nome da Mercadoria
                 </th>
                 <th>
-                    Quantidade
+                    Quantidade em Estoque
+                </th>
+                <th>
+                    Quantidade Mínima
+                </th>
+                <th>
+                    Precisa Comprar
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="text-center" *ngFor = "let mercadoria of mercadorias; 
                 let i = index; let par = even; odd as impar"
-                [ngClass] = "{ par : par , impar : impar}"
+                [ngClass] = "{ par : par , impar : impar}" 
+                [ngSwitch] = "true"
             >
                 <td>
                     {{ mercadoria.ID }}
@@ -28,10 +35,37 @@
                     {{ mercadoria.descricao }}
                 </td>
                 <td>
-                    {{ mercadoria.quantidade }}
+                    {{ mercadoria.quantidadeEstoque }}
                 </td>
-                
+                <td>
+                    {{ mercadoria.quantidadeMinima }} 
+                </td>
+                <td>
+                    <span *ngSwitchCase="mercadoria.quantidadeEstoque > mercadoria.quantidadeMinima">
+                        Não
+                    </span>
+                    <span *ngSwitchCase="mercadoria.quantidadeEstoque < mercadoria.quantidadeMinima">
+                        Sim
+                    </span>
+                    <span *ngSwitchCase="mercadoria.quantidadeEstoque == mercadoria.quantidadeMinima">
+                        Fique Atento
+                    </span>
+                </td>
+
             </tr>
         </tbody>
     </table>
+</div>
+
+<div class=" center-hor container-input">
+    ID:
+    <input type="text" name="id" class="width-100" [(ngModel)] = "novaMercadoria.ID">
+    Descrição:
+    <input type="text" name="descricao" class="width-100" [(ngModel)] = "novaMercadoria.descricao">
+    Quantidade em Estoque:
+    <input type="text" name="quantidadeEstoque" class="width-100" [(ngModel)] = "novaMercadoria.quantidadeEstoque">
+    Quantidade Mínima:
+    <input type="text" name="quantidadeMinima" class="width-100" [(ngModel)] = "novaMercadoria.quantidadeMinima">
+
+    <button (click)="adicionarMercadoria()">Adicionar Mercadoria</button>
 </div>

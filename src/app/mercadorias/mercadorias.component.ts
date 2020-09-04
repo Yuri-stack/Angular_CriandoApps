@@ -10,10 +10,23 @@ export class MercadoriasComponent implements OnInit {
   title = "Lista de Compras"
 
   mercadorias = [
-    {ID: 1, descricao : "Arroz", quantidade : 1},
-    {ID: 2, descricao : "Feijão", quantidade : 5},
-    {ID: 3, descricao : "Óleo", quantidade : 2},
+    {ID: 1, descricao : "Arroz", quantidadeEstoque : 1, quantidadeMinima: 2},
+    {ID: 2, descricao : "Feijão", quantidadeEstoque : 5, quantidadeMinima: 3},
+    {ID: 3, descricao : "Óleo", quantidadeEstoque : 2, quantidadeMinima: 2},
   ]
+
+  novaMercadoria = {
+    ID: 4, descricao : "Sal", quantidadeEstoque : 2, quantidadeMinima: 1
+  }
+
+  adicionarMercadoria(){
+    this.mercadorias.push({
+      ID: this.novaMercadoria.ID,
+      descricao: this.novaMercadoria.descricao,
+      quantidadeEstoque: this.novaMercadoria.quantidadeEstoque,
+      quantidadeMinima: this.novaMercadoria.quantidadeMinima
+    })
+  }
 
   constructor() { }
 
