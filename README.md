@@ -37,6 +37,8 @@
 - [X] Directives, Arrays
 - [X] Inserting Form
 - [X] Adding data via the Form
+- [X] Data validation 
+- [X] Services and Classes
 - [ ] Loading...
 
 ## Getting started

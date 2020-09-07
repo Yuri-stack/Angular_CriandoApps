@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MercadoriaService } from '../mercadoria.service';
+import { Mercadoria } from '../mercadoria';
 @Component({
   selector: 'app-mercadorias',
   templateUrl: './mercadorias.component.html',
@@ -9,11 +10,7 @@ export class MercadoriasComponent implements OnInit {
 
   title = "Lista de Compras"
 
-  mercadorias = [
-    {ID: 1, descricao : "Arroz", quantidadeEstoque : 1, quantidadeMinima: 2},
-    {ID: 2, descricao : "Feijão", quantidadeEstoque : 5, quantidadeMinima: 3},
-    {ID: 3, descricao : "Óleo", quantidadeEstoque : 2, quantidadeMinima: 2},
-  ]
+  mercadorias: Mercadoria[];
 
   novaMercadoria = {
     ID: 4, descricao : "Sal", quantidadeEstoque : 2, quantidadeMinima: 1
@@ -28,9 +25,14 @@ export class MercadoriasComponent implements OnInit {
     })
   }
 
-  constructor() { }
+  constructor(private mercadoriaService: MercadoriaService) { }
 
   ngOnInit(): void {
+    this.getMercadorias();
+  }
+
+  getMercadorias(): void {
+    this.mercadorias = this.mercadoriaService.getMercadorias();
   }
 
 }
