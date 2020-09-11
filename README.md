@@ -39,6 +39,7 @@
 - [X] Adding data via the Form
 - [X] Data validation 
 - [X] Services and Classes
+- [X] Add Routes
 - [ ] Loading...
 
 ## Getting started

@@ -1,0 +1,25 @@
+.center-hor{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.par{
+    background-color: #bdbdbd;
+}
+
+.impar{
+    background-color: #e8e8e8;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.container-input{
+    width: 500px;
+    margin-top: 20px;
+}
