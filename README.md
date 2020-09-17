@@ -40,7 +40,8 @@
 - [X] Data validation 
 - [X] Services and Classes
 - [X] Add Routes
-- [ ] Loading...
+- [X] HTTP x HTTPS
+- [X] Finalizing Project
 
 ## Getting started
 
